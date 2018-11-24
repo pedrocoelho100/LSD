@@ -1,0 +1,16 @@
+entity FreqDivider is
+ generic(K : positive := 2);
+ port(clkIn : in std_logic;
+ clkOut : out std_logic);
+end FreqDivider;
+architecture Behavioral of FreqDivider is
+ signal s_counter : natural;
+ constant halfWay : natural := K/2-1;
+begin
+ process(clkIn)
+ begin
+ if( rising_edge(clkIn) ) then
+-- Complete o código
+ end if;
+ end process;
+end Behavioral;

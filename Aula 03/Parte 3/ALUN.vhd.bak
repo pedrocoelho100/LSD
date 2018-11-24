@@ -1,0 +1,8 @@
+entity ALUN
+ generic(N : natural := 8);
+ port(a, b : in std_logic_vector(N - 1 downto 0);
+ ...
+end ALUN;
+architecture Behavioral of ALUN is
+ signal s_a, s_b : unsigned(N - 1 downto 0);
+ signal s_m : unsigned((2 * N) - 1 downto 0);

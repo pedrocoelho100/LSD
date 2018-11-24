@@ -1,0 +1,80 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Pedro Coelho\Desktop\Documentos\1Ano\LSD\Aula6\Parte3\simulation\modelsim
+Ealu4
+Z1 w1429097748
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Pedro Coelho\Desktop\Documentos\1Ano\LSD\Aula6\Parte3\simulation\modelsim
+Z6 8C:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4.vhd
+Z7 FC:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4.vhd
+l0
+L5
+VkofNoDdEUJS7RnzozgkYe3
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1429097813.713000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4.vhd|
+Z11 !s107 C:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 OZ5Qgh075^5=ck=n[?>TA2
+!i10b 1
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 4 alu4 0 22 kofNoDdEUJS7RnzozgkYe3
+l18
+L13
+Vil`lH`D8QOn4W9bY;Q4CE2
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 aC7e3MJV`MgclmkL2B1lj1
+!i10b 1
+Ealu4tb
+Z15 w1429097686
+R2
+R3
+R4
+R5
+Z16 8C:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4Tb.vhd
+Z17 FC:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4Tb.vhd
+l0
+L6
+VXCmhn0e>;Seak;RWVa;Rz3
+!s100 Q[`=QL`zaoL;lM64f58?N3
+R8
+32
+!i10b 1
+Z18 !s108 1429097827.415000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4Tb.vhd|
+Z20 !s107 C:/Users/Pedro Coelho/Desktop/Documentos/1Ano/LSD/Aula6/Parte3/ALU4Tb.vhd|
+Z21 o-work work -O0
+R13
+Astimulus
+R14
+R2
+R3
+R4
+Z22 DEx4 work 6 alu4tb 0 22 XCmhn0e>;Seak;RWVa;Rz3
+l15
+L10
+Z23 VFUn0?cUi[dEVK0Q3X]iZz1
+Z24 !s100 ASMg?J4OG@oGFR2O4MlEn0
+R8
+32
+!i10b 1
+R18
+R19
+R20
+R21
+R13

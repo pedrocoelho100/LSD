@@ -1,0 +1,27 @@
+|LatchDemo
+SW[0] => latch_4bits:latch_4bits.input[0]
+SW[1] => latch_4bits:latch_4bits.input[1]
+SW[2] => latch_4bits:latch_4bits.input[2]
+SW[3] => latch_4bits:latch_4bits.input[3]
+SW[4] => latch_4bits:latch_4bits.clk
+LEDR[0] <= latch_4bits:latch_4bits.output[0]
+LEDR[1] <= latch_4bits:latch_4bits.output[1]
+LEDR[2] <= latch_4bits:latch_4bits.output[2]
+LEDR[3] <= latch_4bits:latch_4bits.output[3]
+
+
+|LatchDemo|Latch_4bits:latch_4bits
+clk => output[0]$latch.LATCH_ENABLE
+clk => output[1]$latch.LATCH_ENABLE
+clk => output[2]$latch.LATCH_ENABLE
+clk => output[3]$latch.LATCH_ENABLE
+input[0] => output[0]$latch.DATAIN
+input[1] => output[1]$latch.DATAIN
+input[2] => output[2]$latch.DATAIN
+input[3] => output[3]$latch.DATAIN
+output[0] <= output[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= output[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= output[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= output[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

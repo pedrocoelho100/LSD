@@ -1,0 +1,31 @@
+|LogicDemo
+SW[0] => logicunit:top_level.input0
+SW[1] => logicunit:top_level.input1
+LEDR[0] << logicunit:top_level.invOut
+LEDR[1] << logicunit:top_level.andOut
+LEDR[2] << logicunit:top_level.orOut
+LEDR[3] << logicunit:top_level.xorOut
+LEDR[4] << logicunit:top_level.nandOut
+LEDR[5] << logicunit:top_level.norOut
+
+
+|LogicDemo|LogicUnit:top_level
+input0 => andOut.IN0
+input0 => orOut.IN0
+input0 => xorOut.IN0
+input0 => nandOut.IN0
+input0 => norOut.IN0
+input0 => invOut.DATAIN
+input1 => andOut.IN1
+input1 => orOut.IN1
+input1 => xorOut.IN1
+input1 => nandOut.IN1
+input1 => norOut.IN1
+invOut <= input0.DB_MAX_OUTPUT_PORT_TYPE
+andOut <= andOut.DB_MAX_OUTPUT_PORT_TYPE
+orOut <= orOut.DB_MAX_OUTPUT_PORT_TYPE
+xorOut <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+nandOut <= nandOut.DB_MAX_OUTPUT_PORT_TYPE
+norOut <= norOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

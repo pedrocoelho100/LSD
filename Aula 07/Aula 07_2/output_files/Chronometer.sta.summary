@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.609
+TNS   : -277.948
+
+Type  : Slow 1200mV 85C Model Setup 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : -2.393
+TNS   : -39.993
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -0.067
+TNS   : -0.067
+
+Type  : Slow 1200mV 85C Model Hold 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : -3.244
+TNS   : -3.244
+
+Type  : Slow 1200mV 85C Model Recovery 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : -3.214
+TNS   : -3.214
+
+Type  : Slow 1200mV 85C Model Removal 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : 3.682
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : 3.714
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -161.055
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : -1.285
+TNS   : -25.700
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.183
+TNS   : -242.297
+
+Type  : Slow 1200mV 0C Model Setup 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : -2.101
+TNS   : -34.707
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.010
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : -2.902
+TNS   : -2.902
+
+Type  : Slow 1200mV 0C Model Recovery 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : -2.881
+TNS   : -2.881
+
+Type  : Slow 1200mV 0C Model Removal 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : 3.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : 3.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -161.055
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : -1.285
+TNS   : -25.700
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.284
+TNS   : -72.547
+
+Type  : Fast 1200mV 0C Model Setup 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : -0.653
+TNS   : -9.648
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.265
+TNS   : -0.265
+
+Type  : Fast 1200mV 0C Model Hold 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : 0.045
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : -1.450
+TNS   : -1.450
+
+Type  : Fast 1200mV 0C Model Recovery 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : -1.444
+TNS   : -1.444
+
+Type  : Fast 1200mV 0C Model Removal 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : 2.139
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : 2.146
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -134.028
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ChronometerCore:system_core|ClkDividerN:clk_divider_500000|clkOut'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_dirtyIn'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ChronometerCore:system_core|DebounceUnit:statop_debounce|s_dirtyIn'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

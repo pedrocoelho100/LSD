@@ -1,0 +1,418 @@
+Analysis & Synthesis report for Chronometer
+Wed Apr 22 12:26:21 2015
+Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Chronometer|ChronometerCore:system_core|ControlUnit:control_unit|s_currentState
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: ChronometerCore:system_core|ClkDividerN:clk_divider_500000
+ 12. Parameter Settings for User Entity Instance: ChronometerCore:system_core|DebounceUnit:statop_debounce
+ 13. Parameter Settings for User Entity Instance: ChronometerCore:system_core|DebounceUnit:laprst_debounce
+ 14. Parameter Settings for User Entity Instance: ChronometerCore:system_core|RegN:freeze_register
+ 15. Port Connectivity Checks: "ChronometerCore:system_core|RegN:freeze_register"
+ 16. Port Connectivity Checks: "ChronometerCore:system_core|ClkDividerN:clk_divider_500000"
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Apr 22 12:26:21 2015       ;
+; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Full Version ;
+; Revision Name                      ; Chronometer                                 ;
+; Top-level Entity Name              ; Chronometer                                 ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 267                                         ;
+;     Total combinational functions  ; 239                                         ;
+;     Dedicated logic registers      ; 153                                         ;
+; Total registers                    ; 153                                         ;
+; Total pins                         ; 47                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Chronometer        ; Chronometer        ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                               ;
++----------------------------------+-----------------+-----------------+-------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path        ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------+---------+
+; DebounceUnit.vhd                 ; yes             ; User VHDL File  ; Z:/altera/aula7/DebounceUnit.vhd    ;         ;
+; ControlUnit.vhd                  ; yes             ; User VHDL File  ; Z:/altera/aula7/ControlUnit.vhd     ;         ;
+; CntBCDUp4.vhd                    ; yes             ; User VHDL File  ; Z:/altera/aula7/CntBCDUp4.vhd       ;         ;
+; ClkDividerN.vhd                  ; yes             ; User VHDL File  ; Z:/altera/aula7/ClkDividerN.vhd     ;         ;
+; ChronometerCore.vhd              ; yes             ; User VHDL File  ; Z:/altera/aula7/ChronometerCore.vhd ;         ;
+; Chronometer.vhd                  ; yes             ; User VHDL File  ; Z:/altera/aula7/Chronometer.vhd     ;         ;
+; Bin7SegDecoder.vhd               ; yes             ; User VHDL File  ; Z:/altera/aula7/Bin7SegDecoder.vhd  ;         ;
+; RegN.vhd                         ; yes             ; User VHDL File  ; Z:/altera/aula7/RegN.vhd            ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 267            ;
+;                                             ;                ;
+; Total combinational functions               ; 239            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 102            ;
+;     -- 3 input functions                    ; 19             ;
+;     -- <=2 input functions                  ; 118            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 146            ;
+;     -- arithmetic mode                      ; 93             ;
+;                                             ;                ;
+; Total registers                             ; 153            ;
+;     -- Dedicated logic registers            ; 153            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 47             ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 127            ;
+; Total fan-out                               ; 1333           ;
+; Average fan-out                             ; 2.74           ;
++---------------------------------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; |Chronometer                           ; 239 (1)           ; 153 (0)      ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |Chronometer                                                            ; work         ;
+;    |ChronometerCore:system_core|       ; 238 (0)           ; 153 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core                                ; work         ;
+;       |Bin7SegDecoder:disp_0_decoder|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|Bin7SegDecoder:disp_0_decoder  ; work         ;
+;       |Bin7SegDecoder:disp_1_decoder|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|Bin7SegDecoder:disp_1_decoder  ; work         ;
+;       |Bin7SegDecoder:disp_2_decoder|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|Bin7SegDecoder:disp_2_decoder  ; work         ;
+;       |Bin7SegDecoder:disp_3_decoder|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|Bin7SegDecoder:disp_3_decoder  ; work         ;
+;       |Bin7SegDecoder:disp_4_decoder|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|Bin7SegDecoder:disp_4_decoder  ; work         ;
+;       |Bin7SegDecoder:disp_5_decoder|  ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|Bin7SegDecoder:disp_5_decoder  ; work         ;
+;       |ClkDividerN:clk_divider_500000| ; 52 (52)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|ClkDividerN:clk_divider_500000 ; work         ;
+;       |CntBCDUp4:bcd_counter|          ; 47 (47)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|CntBCDUp4:bcd_counter          ; work         ;
+;       |ControlUnit:control_unit|       ; 11 (11)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|ControlUnit:control_unit       ; work         ;
+;       |DebounceUnit:laprst_debounce|   ; 43 (43)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|DebounceUnit:laprst_debounce   ; work         ;
+;       |DebounceUnit:statop_debounce|   ; 43 (43)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|DebounceUnit:statop_debounce   ; work         ;
+;       |RegN:freeze_register|           ; 0 (0)             ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Chronometer|ChronometerCore:system_core|RegN:freeze_register           ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Chronometer|ChronometerCore:system_core|ControlUnit:control_unit|s_currentState                                                                    ;
++------------------------------+------------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+; Name                         ; s_currentState.CstoppedNView ; s_currentState.TLapView ; s_currentState.TStopped ; s_currentState.TStarted ; s_currentState.TCleared ;
++------------------------------+------------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+; s_currentState.TCleared      ; 0                            ; 0                       ; 0                       ; 0                       ; 0                       ;
+; s_currentState.TStarted      ; 0                            ; 0                       ; 0                       ; 1                       ; 1                       ;
+; s_currentState.TStopped      ; 0                            ; 0                       ; 1                       ; 0                       ; 1                       ;
+; s_currentState.TLapView      ; 0                            ; 1                       ; 0                       ; 0                       ; 1                       ;
+; s_currentState.CstoppedNView ; 1                            ; 0                       ; 0                       ; 0                       ; 1                       ;
++------------------------------+------------------------------+-------------------------+-------------------------+-------------------------+-------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 153   ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 62    ;
+; Number of registers using Asynchronous Clear ; 66    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 47    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |Chronometer|ChronometerCore:system_core|DebounceUnit:laprst_debounce|s_debounceCnt[1] ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |Chronometer|ChronometerCore:system_core|DebounceUnit:statop_debounce|s_debounceCnt[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Chronometer|ChronometerCore:system_core|CntBCDUp4:bcd_counter|s_count[0]              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Chronometer|ChronometerCore:system_core|CntBCDUp4:bcd_counter|s_count[7]              ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Chronometer|ChronometerCore:system_core|CntBCDUp4:bcd_counter|s_count[11]             ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |Chronometer|ChronometerCore:system_core|CntBCDUp4:bcd_counter|s_count[15]             ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 3 LEs                ; 12 LEs                 ; Yes        ; |Chronometer|ChronometerCore:system_core|CntBCDUp4:bcd_counter|s_count[18]             ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Chronometer|ChronometerCore:system_core|CntBCDUp4:bcd_counter|s_count[20]             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ChronometerCore:system_core|ClkDividerN:clk_divider_500000 ;
++----------------+--------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                          ;
++----------------+--------+-------------------------------------------------------------------------------+
+; divfactor      ; 500000 ; Signed Integer                                                                ;
++----------------+--------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ChronometerCore:system_core|DebounceUnit:statop_debounce ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; clkfrekhz      ; 50000 ; Signed Integer                                                               ;
+; blindmsec      ; 100   ; Signed Integer                                                               ;
+; inpol          ; '0'   ; Enumerated                                                                   ;
+; outpol         ; '1'   ; Enumerated                                                                   ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ChronometerCore:system_core|DebounceUnit:laprst_debounce ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; clkfrekhz      ; 50000 ; Signed Integer                                                               ;
+; blindmsec      ; 100   ; Signed Integer                                                               ;
+; inpol          ; '0'   ; Enumerated                                                                   ;
+; outpol         ; '1'   ; Enumerated                                                                   ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ChronometerCore:system_core|RegN:freeze_register ;
++----------------+--------------------------+---------------------------------------------------+
+; Parameter Name ; Value                    ; Type                                              ;
++----------------+--------------------------+---------------------------------------------------+
+; size           ; 24                       ; Signed Integer                                    ;
+; resetvalue     ; 000000000000000000000000 ; Unsigned Binary                                   ;
++----------------+--------------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ChronometerCore:system_core|RegN:freeze_register" ;
++------------+-------+----------+----------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                      ;
++------------+-------+----------+----------------------------------------------+
+; asyncreset ; Input ; Info     ; Stuck at GND                                 ;
+; syncreset  ; Input ; Info     ; Stuck at GND                                 ;
++------------+-------+----------+----------------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ChronometerCore:system_core|ClkDividerN:clk_divider_500000" ;
++-------+-------+----------+-------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                     ;
++-------+-------+----------+-------------------------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                                                ;
++-------+-------+----------+-------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.1.4 Build 182 03/12/2014 SJ Full Version
+    Info: Processing started: Wed Apr 22 12:26:08 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Chronometer -c Chronometer
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file debounceunit.vhd
+    Info (12022): Found design unit 1: DebounceUnit-Behavioral
+    Info (12023): Found entity 1: DebounceUnit
+Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
+    Info (12022): Found design unit 1: ControlUnit-Behavioral
+    Info (12023): Found entity 1: ControlUnit
+Info (12021): Found 2 design units, including 1 entities, in source file cntbcdup4.vhd
+    Info (12022): Found design unit 1: CntBCDUp4-Behavioral
+    Info (12023): Found entity 1: CntBCDUp4
+Info (12021): Found 2 design units, including 1 entities, in source file clkdividern.vhd
+    Info (12022): Found design unit 1: ClkDividerN-Behavioral
+    Info (12023): Found entity 1: ClkDividerN
+Info (12021): Found 2 design units, including 1 entities, in source file chronometercore.vhd
+    Info (12022): Found design unit 1: ChronometerCore-Structural
+    Info (12023): Found entity 1: ChronometerCore
+Info (12021): Found 2 design units, including 1 entities, in source file chronometer.vhd
+    Info (12022): Found design unit 1: Chronometer-Shell
+    Info (12023): Found entity 1: Chronometer
+Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
+    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral
+    Info (12023): Found entity 1: Bin7SegDecoder
+Info (12021): Found 2 design units, including 1 entities, in source file regn.vhd
+    Info (12022): Found design unit 1: RegN-Behavioral
+    Info (12023): Found entity 1: RegN
+Info (12127): Elaborating entity "Chronometer" for the top level hierarchy
+Info (12129): Elaborating entity "ChronometerCore" using architecture "A:structural" for hierarchy "ChronometerCore:system_core"
+Info (12129): Elaborating entity "ClkDividerN" using architecture "A:behavioral" for hierarchy "ChronometerCore:system_core|ClkDividerN:clk_divider_500000"
+Info (12129): Elaborating entity "DebounceUnit" using architecture "A:behavioral" for hierarchy "ChronometerCore:system_core|DebounceUnit:statop_debounce"
+Info (12129): Elaborating entity "ControlUnit" using architecture "A:behavioral" for hierarchy "ChronometerCore:system_core|ControlUnit:control_unit"
+Info (12129): Elaborating entity "CntBCDUp4" using architecture "A:behavioral" for hierarchy "ChronometerCore:system_core|CntBCDUp4:bcd_counter"
+Info (12129): Elaborating entity "RegN" using architecture "A:behavioral" for hierarchy "ChronometerCore:system_core|RegN:freeze_register"
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "ChronometerCore:system_core|Bin7SegDecoder:disp_0_decoder"
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[2]"
+Info (21057): Implemented 314 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 267 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 401 megabytes
+    Info: Processing ended: Wed Apr 22 12:26:21 2015
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:05
+
+

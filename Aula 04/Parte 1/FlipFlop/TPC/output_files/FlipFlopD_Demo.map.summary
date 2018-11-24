@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Mar 18 19:22:08 2015
+Quartus II 64-Bit Version : 13.1.4 Build 182 03/12/2014 SJ Web Edition
+Revision Name : FlipFlopD_Demo
+Top-level Entity Name : FlipFlopD_Demo
+Family : Cyclone IV E
+Total logic elements : 4
+    Total combinational functions : 4
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

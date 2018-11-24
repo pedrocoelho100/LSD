@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+
+entity LampUnit is
+	port(a : in std_logic;
+			b : in std_logic;
+			lamp : out std_logic);
+end LampUnit;
+architecture Behavioral of LampUnit is
+begin
+	lamp <= a XOR b;
+end Behavioral;

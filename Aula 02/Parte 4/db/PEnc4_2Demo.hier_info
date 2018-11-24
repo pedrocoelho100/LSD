@@ -1,0 +1,25 @@
+|PEnc4_2Demo
+SW[0] => penc4_2:system_core.inputs[0]
+SW[1] => penc4_2:system_core.inputs[1]
+SW[2] => penc4_2:system_core.inputs[2]
+SW[3] => penc4_2:system_core.inputs[3]
+LEDR[0] <= penc4_2:system_core.outputs[0]
+LEDR[1] <= penc4_2:system_core.outputs[1]
+LEDR[2] <= penc4_2:system_core.validOut
+
+
+|PEnc4_2Demo|PEnc4_2:system_core
+inputs[0] => Equal0.IN3
+inputs[1] => outputs.DATAA
+inputs[1] => Equal0.IN2
+inputs[2] => outputs.OUTPUTSELECT
+inputs[2] => outputs.DATAA
+inputs[2] => Equal0.IN1
+inputs[3] => outputs.OUTPUTSELECT
+inputs[3] => outputs.OUTPUTSELECT
+inputs[3] => Equal0.IN0
+outputs[0] <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+outputs[1] <= outputs.DB_MAX_OUTPUT_PORT_TYPE
+validOut <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+|Mux4_1En
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN1
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN0
+inputs[0] => muxOut.DATAB
+inputs[1] => muxOut.DATAB
+inputs[2] => muxOut.DATAB
+inputs[3] => muxOut.DATAA
+muxOut <= muxOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

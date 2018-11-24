@@ -1,0 +1,24 @@
+|Mux4_1Demo
+SW[0] => mux4_1:system_core.inputs[0]
+SW[1] => mux4_1:system_core.inputs[1]
+SW[2] => mux4_1:system_core.inputs[2]
+SW[3] => mux4_1:system_core.inputs[3]
+KEY[0] => mux4_1:system_core.sel[0]
+KEY[1] => mux4_1:system_core.sel[1]
+LEDR[0] <= mux4_1:system_core.muxOut
+
+
+|Mux4_1Demo|Mux4_1:system_core
+sel[0] => Equal0.IN1
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN0
+sel[1] => Equal0.IN0
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN1
+inputs[0] => muxOut.DATAB
+inputs[1] => muxOut.DATAB
+inputs[2] => muxOut.DATAB
+inputs[3] => muxOut.DATAA
+muxOut <= muxOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

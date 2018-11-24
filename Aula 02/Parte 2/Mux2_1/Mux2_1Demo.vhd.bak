@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Mux2_1 is
+begin
+
+	port(SW : in std_logic_vector(1 downto 0);
+		  LEDR : out std_logic_vector(3 downto 0));
+		  
+end Mux2_1;

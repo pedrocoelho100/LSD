@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Counter_Demo is
+
+	port(KEY  : in std_logic_vector(0 downto 0)
+		  HEX : out std_logic_vector(0 downto 0));
+	
+end Counter_Demo;
